@@ -15,13 +15,12 @@ const userSchema = mongoose.Schema({
   },
   telefono: {
     type: Number,
-    required: true
+    required: true,
   },
   email: {
     type: String,
-    required: true
-  }
-
+    required: true,
+  },
 });
 
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model("User", userSchema);

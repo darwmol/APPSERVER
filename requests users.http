@@ -5,10 +5,10 @@ Content-Type: application/json
 {
   "name": "Vannessa Pisso",
   "apellido": 30,
-  "direccion": "darwmolina@gmail.com",
-  "telefono": "3136113212"
+  "direccion": "carrera3",
+  "telefono": "3136113212",
+  "email": "darwmolina@gmail.com"
 }
-
 
 // Obtener todos los usuarios
 ###
@@ -32,3 +32,4 @@ Content-Type: application/json
   "telefono": ,
   "email": ""
 }
+
