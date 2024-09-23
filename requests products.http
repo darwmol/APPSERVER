@@ -6,7 +6,7 @@ Content-Type: application/json
   "title": "Coleccion1",
   "price": "90.000",
   "description": "carrera3",
-  "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+  "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
 }
 
 // Obtener todos los productos
