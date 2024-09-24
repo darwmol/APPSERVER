@@ -10,9 +10,17 @@ const productRoutes = require ("./src/routes/product");
 
 const port = process.env.PORT || 4200;
 
+const allowedOrigins = ['https://marvalenstore.web.app', 'http://localhost:4200'];
+
 app.use(cors({
-  origin: 'https://marvalenstore.web.app', // Permite solo esta URL
-  methods: 'GET,POST,PUT,DELETE',   // Métodos permitidos
+  origin: function (origin, callback) {
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, origin); // Permitir el origen
+    } else {
+      callback(new Error('No permitido por CORS')); // Bloquear el origen
+    }
+  },
+  methods: 'GET,POST,PUT,DELETE', // Métodos permitidos
   allowedHeaders: 'Content-Type,Authorization' // Encabezados permitidos
 }));
 
