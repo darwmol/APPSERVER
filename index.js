@@ -11,7 +11,7 @@ const productRoutes = require ("./src/routes/product");
 const port = process.env.PORT || 4200;
 
 app.use(cors({
-  origin: 'http://localhost:4200', // Permite solo esta URL
+  origin: 'https://marvalenstore.web.app', // Permite solo esta URL
   methods: 'GET,POST,PUT,DELETE',   // Métodos permitidos
   allowedHeaders: 'Content-Type,Authorization' // Encabezados permitidos
 }));
