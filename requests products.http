@@ -1,11 +1,11 @@
 ###
-POST http://localhost:9000/api/products HTTP/1.1
+POST http://localhost:9000/products HTTP/1.1
 Content-Type: application/json
 
 {
-  "title": "Coleccion1",
+  "title": "Coleccion2",
   "price": "90.000",
-  "description": "carrera3",
+  "description": "Colleccion2",
   "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
 }
 

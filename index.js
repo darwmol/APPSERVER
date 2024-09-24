@@ -16,8 +16,8 @@ app.get("/", (req, res) => {
 
 //middleware
 app.use(express.json());
-app.use('/api', userRoutes)
-app.use('/api', productRoutes)
+app.use('', userRoutes)
+app.use('', productRoutes)
 
 //mongobd connection
 mongoose
