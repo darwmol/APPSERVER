@@ -8,7 +8,7 @@ const productRoutes = require ("./src/routes/product");
 
 
 
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 4200;
 
 app.use(cors({
   origin: 'http://localhost:4200', // Permite solo esta URL

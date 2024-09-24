@@ -1,8 +1,9 @@
 const mongoose = require("mongoose");
 const AutoIncrement = require("mongoose-sequence")(mongoose);
 
+
 const proSchema = mongoose.Schema({
-  id: { type: Number, unique: true },
+  
 
   title: {
     type: String,
