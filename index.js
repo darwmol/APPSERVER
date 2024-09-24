@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require('cors');
 const mongoose = require("mongoose");
 require("dotenv").config();
 const userRoutes = require ("./src/routes/user");
@@ -8,6 +9,12 @@ const productRoutes = require ("./src/routes/product");
 
 
 const port = process.env.PORT || 9000;
+
+app.use(cors({
+  origin: 'http://localhost:4200', // Permite solo esta URL
+  methods: 'GET,POST,PUT,DELETE',   // Métodos permitidos
+  allowedHeaders: 'Content-Type,Authorization' // Encabezados permitidos
+}));
 
 //routes
 app.get("/", (req, res) => {

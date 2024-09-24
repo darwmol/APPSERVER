@@ -3,7 +3,7 @@ POST http://localhost:9000/products HTTP/1.1
 Content-Type: application/json
 
 {
-  "title": "Coleccion2",
+  "title": "1",
   "price": "90.000",
   "description": "Colleccion2",
   "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
