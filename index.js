@@ -29,6 +29,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to server");
 });
 
+
 //middleware
 app.use(express.json());
 app.use('', userRoutes)

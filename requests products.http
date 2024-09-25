@@ -1,12 +1,12 @@
 ###
-POST http://localhost:9000/products HTTP/1.1
+POST http://localhost:4200/products HTTP/1.1
 Content-Type: application/json
 
 {
-  "title": "Calzado para dama",
+  "title": "Calzado para dama 18",
   "price": "90000",
-  "description": "Colleccion1",
-  "image": "https://i.imgur.com/Hqbnkva.png"
+  "description": "Colección 1",
+  "image": "https://i.postimg.cc/J0zQ2FZZ/18.jpg"
 
 }
 

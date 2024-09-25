@@ -21,12 +21,20 @@ router.get("/products", (req, res) => {
 });
 
 // get a product
-router.get("/products/:id", (req, res) => {
-  const { id } = req.params;
-  proSchema
-    .findById(id)
-    .then((data) => res.json(data))
-    .catch((error) => res.json({ message: error }));
+router.get('/products/:id', async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const product = await Product.findOne({ id: id });
+    if (!product) {
+      return res.status(404).send('Producto no encontrado');
+    }
+
+    const { _id, ...resto } = product.toObject();
+    res.json({ id: _id.toString(), ...resto });
+  } catch (error) {
+    res.status(500).send('Error en el servidor');
+  }
 });
 
 // delete a product
