@@ -1,6 +1,6 @@
 const express = require("express");
-const proSchema = require("../models/productos");
-
+const proSchema = require("../models/Product");
+const Product = require('../models/Product');
 const router = express.Router();
 
 // create product
