@@ -20,12 +20,14 @@ router.get("/products", (req, res) => {
     .catch((error) => res.json({ message: error }));
 });
 
-// get a product
 router.get('/products/:id', async (req, res) => {
   const id = req.params.id;
 
   try {
+    console.log('Buscando producto con ID:', id); // Agrega esta línea para depuración
     const product = await Product.findOne({ id: id });
+    console.log('Producto encontrado:', product); // Agrega esta línea para ver el resultado de la búsqueda
+
     if (!product) {
       return res.status(404).send('Producto no encontrado');
     }
@@ -33,12 +35,13 @@ router.get('/products/:id', async (req, res) => {
     const { _id, ...resto } = product.toObject();
     res.json({ id: _id.toString(), ...resto });
   } catch (error) {
+    console.error('Error al buscar el producto:', error); // Imprime el error en la consola
     res.status(500).send('Error en el servidor');
   }
 });
 
 // delete a product
-router.delete("/products/:id", (req, res) => {
+router.delete("/products/:id", (req, res) => {  
   const { id } = req.params;
   proSchema
     .remove({ _id: id })
